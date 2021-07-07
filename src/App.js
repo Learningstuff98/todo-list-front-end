@@ -7,13 +7,22 @@ function App() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    // axios.get(`http://localhost:8000/tasks`)
-    axios.get(`https://andy-todo-list-back-end.herokuapp.com/tasks`)
+    getTasks();
+  }, []);
+
+  //const url = 'http://localhost:8000';
+  const url = 'https://andy-todo-list-back-end.herokuapp.com';
+
+  const getTasks = () => {
+    axios.get(`${url}/tasks`)
     .then((res) => setTasks(res.data))
     .catch((err) => console.log(err.response.data));
-  }, []);
+  };
   
-  const inputForm = <InputForm/>
+  const inputForm = <InputForm
+    getTasks={getTasks}
+    url={url}
+  />
 
   const tasksDisplay = <DisplayTasks
     tasks={tasks}

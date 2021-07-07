@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-function InputForm() {
+function InputForm(props) {
   const [input, setInput] = useState('');
 
   const submitComment = (formData) => {
-    //axios.post(`http://localhost:8000/tasks`, formData)
-    axios.post(`https://andy-todo-list-back-end.herokuapp.com/tasks`, formData)
+    axios.post(`${props.url}/tasks`, formData)
+    .then(() => props.getTasks())
     .catch((err) => console.log(err.response.data));
   };
 
