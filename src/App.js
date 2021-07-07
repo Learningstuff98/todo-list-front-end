@@ -25,6 +25,8 @@ function App() {
   />
 
   const tasksDisplay = <DisplayTasks
+    getTasks={getTasks}
+    url={url}
     tasks={tasks}
   />
 
