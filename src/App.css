@@ -1,3 +1,16 @@
+body {
+  background: linear-gradient(to right, rgb(49, 114, 60), #202020, rgb(49, 114, 60));
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+}
+
+.center {
+  text-align: center;
+}
+
 .green {
-color: rgb(2, 180, 2);
+  color: #00C122;
+}
+
+.cursor:hover {
+  cursor: pointer;
 }

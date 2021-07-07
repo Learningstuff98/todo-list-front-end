@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import InputForm from './InputForm';
 import DisplayTasks from './DisplayTasks';
+import './App.css';
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -30,9 +31,10 @@ function App() {
     tasks={tasks}
   />
 
-  return <div>
+  return <div className="center">
+    <br/><br/><br/>
     {inputForm}
-    <br/>
+    <br/><br/>
     {tasksDisplay}
   </div>
 }

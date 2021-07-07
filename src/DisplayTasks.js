@@ -10,9 +10,10 @@ function DisplayTasks(props) {
 
   return <div>
     {props.tasks.map((task) => {
-      return <div key={task.id}>
+      return <div className="green" key={task.id}>
+        <br/>
         <div>{task.content}</div>
-        <div onClick={() => deleteTask(task.id)}>
+        <div className="cursor" onClick={() => deleteTask(task.id)}>
           Delete
         </div>
       </div>
